@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "bep",
+  "version": "${version}",
+  "name": "Better End Progression",
+  "description": "Makes the first eye of ender really difficult to get.",
+  "authors": [
+    "oathompsonjones",
+    "Random Nautilus"
+  ],
+  "contact": {
+    "homepage": "https://github.com/oathompsonjones/better-end-progression",
+    "sources": "https://github.com/oathompsonjones/better-end-progression"
+  },
+  "license": "MIT",
+  "icon": "assets/bep/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "uk.co.oathompsonjones.BEPDataGenerator"
+    ],
+    "main": [
+      "uk.co.oathompsonjones.BEP"
+    ],
+    "client": [
+      "uk.co.oathompsonjones.BEPClient"
+    ]
+  },
+  "mixins": [
+    "bep.mixins.json"
+  ],
+  "client": [
+    "bep.client.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {}
+}
