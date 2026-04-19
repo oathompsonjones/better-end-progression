@@ -9,6 +9,7 @@ import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import uk.co.oathompsonjones.BEPItems;
 
 import java.util.function.Consumer;
@@ -29,7 +30,7 @@ public class BEPAdvancementProvider extends FabricAdvancementProvider {
         Advancement root = Advancement.Builder.create().display(new ItemStack(BEPItems.HEART_OF_THE_DESERT),
                 Text.literal("Better End Progression"),
                 Text.literal("Begin your journey"),
-                null,
+                new Identifier("minecraft", "textures/block/end_stone_bricks.png"),
                 AdvancementFrame.TASK,
                 false,
                 false,
@@ -50,17 +51,26 @@ public class BEPAdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 .criterion("sea", InventoryChangedCriterion.Conditions.items(Items.HEART_OF_THE_SEA))
+                .criterion("brute", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_BRUTE))
                 .criterion(
-                        "brute",
-                        InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_BRUTE)
+                        "caverns",
+                        InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_CAVERNS)
                 )
-                .criterion("caverns", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_CAVERNS))
                 .criterion("desert", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_DESERT))
-                .criterion("jungle", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_JUNGLE))
+                .criterion(
+                        "jungle",
+                        InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_JUNGLE)
+                )
                 .criterion("ruins", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_RUINS))
-                .criterion("swamp", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_SWAMP))
+                .criterion(
+                        "swamp",
+                        InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_SWAMP)
+                )
                 .criterion("tundra", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_TUNDRA))
-                .criterion("woodlands", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_WOODLANDS))
+                .criterion(
+                        "woodlands",
+                        InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_WOODLANDS)
+                )
                 .requirements(new String[][] {
                         { "sea" },
                         { "brute" },
@@ -88,7 +98,23 @@ public class BEPAdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 .criterion("crafted_end_heart", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_END))
-                .build(consumer, id("end_heart"));
+                .build(
+                        consumer,
+                        id("end_heart")
+                );
+
+        // --- Craft the Eye of Ender ---
+        Advancement eyeOfEnder = Advancement.Builder.create().parent(endHeart).display(new ItemStack(Items.ENDER_EYE),
+                Text.literal("The All Seeing Eye"),
+                Text.literal("Craft an Eye of Ender"),
+                null,
+                AdvancementFrame.GOAL,
+                true,
+                true,
+                false
+        ).criterion("crafted_ender_eye", InventoryChangedCriterion.Conditions.items(Items.ENDER_EYE)).build(consumer,
+                id("eye_of_ender")
+        );
 
         // --- Wear the Guardian Helmet ---
         Advancement guardianHelmet = Advancement.Builder
