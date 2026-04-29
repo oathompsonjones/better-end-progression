@@ -1,4 +1,4 @@
-package uk.co.oathompsonjones.mixin;
+package uk.co.oathompsonjones.bep.mixin;
 
 import net.minecraft.item.EnderEyeItem;
 import net.minecraft.item.Item;

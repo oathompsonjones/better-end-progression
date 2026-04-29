@@ -17,13 +17,13 @@
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "uk.co.oathompsonjones.BEPDataGenerator"
+      "uk.co.oathompsonjones.bep.BEPDataGenerator"
     ],
     "main": [
-      "uk.co.oathompsonjones.BEP"
+      "uk.co.oathompsonjones.bep.BEP"
     ],
     "client": [
-      "uk.co.oathompsonjones.BEPClient"
+      "uk.co.oathompsonjones.bep.BEPClient"
     ]
   },
   "mixins": [

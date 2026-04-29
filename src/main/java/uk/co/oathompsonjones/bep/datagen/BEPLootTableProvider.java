@@ -1,4 +1,4 @@
-package uk.co.oathompsonjones.datagen;
+package uk.co.oathompsonjones.bep.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableProvider;
@@ -11,7 +11,7 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
-import uk.co.oathompsonjones.BEPItems;
+import uk.co.oathompsonjones.bep.BEPItems;
 
 import java.util.function.BiConsumer;
 

@@ -1,4 +1,4 @@
-package uk.co.oathompsonjones.datagen;
+package uk.co.oathompsonjones.bep.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import uk.co.oathompsonjones.BEPItems;
+import uk.co.oathompsonjones.bep.BEPItems;
 
 import java.util.function.Consumer;
 
@@ -51,26 +51,17 @@ public class BEPAdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 .criterion("sea", InventoryChangedCriterion.Conditions.items(Items.HEART_OF_THE_SEA))
-                .criterion("brute", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_BRUTE))
                 .criterion(
-                        "caverns",
-                        InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_CAVERNS)
+                        "brute",
+                        InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_BRUTE)
                 )
+                .criterion("caverns", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_CAVERNS))
                 .criterion("desert", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_DESERT))
-                .criterion(
-                        "jungle",
-                        InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_JUNGLE)
-                )
+                .criterion("jungle", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_JUNGLE))
                 .criterion("ruins", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_RUINS))
-                .criterion(
-                        "swamp",
-                        InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_SWAMP)
-                )
+                .criterion("swamp", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_SWAMP))
                 .criterion("tundra", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_TUNDRA))
-                .criterion(
-                        "woodlands",
-                        InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_WOODLANDS)
-                )
+                .criterion("woodlands", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_WOODLANDS))
                 .requirements(new String[][] {
                         { "sea" },
                         { "brute" },
@@ -98,10 +89,7 @@ public class BEPAdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 .criterion("crafted_end_heart", InventoryChangedCriterion.Conditions.items(BEPItems.HEART_OF_THE_END))
-                .build(
-                        consumer,
-                        id("end_heart")
-                );
+                .build(consumer, id("end_heart"));
 
         // --- Craft the Eye of Ender ---
         Advancement eyeOfEnder = Advancement.Builder.create().parent(endHeart).display(new ItemStack(Items.ENDER_EYE),

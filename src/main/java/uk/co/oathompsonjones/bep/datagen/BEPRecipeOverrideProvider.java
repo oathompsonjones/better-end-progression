@@ -1,4 +1,4 @@
-package uk.co.oathompsonjones.datagen;
+package uk.co.oathompsonjones.bep.datagen;
 
 import com.google.gson.JsonObject;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;

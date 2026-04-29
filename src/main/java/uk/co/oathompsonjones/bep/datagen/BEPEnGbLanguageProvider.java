@@ -1,10 +1,10 @@
-package uk.co.oathompsonjones.datagen;
+package uk.co.oathompsonjones.bep.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.item.Item;
-import uk.co.oathompsonjones.BEP;
-import uk.co.oathompsonjones.BEPItems;
+import uk.co.oathompsonjones.bep.BEP;
+import uk.co.oathompsonjones.bep.BEPItems;
 
 public class BEPEnGbLanguageProvider extends FabricLanguageProvider {
     public BEPEnGbLanguageProvider(FabricDataOutput dataGenerator) {

@@ -1,4 +1,4 @@
-package uk.co.oathompsonjones.mixin;
+package uk.co.oathompsonjones.bep.mixin;
 
 import net.minecraft.block.BarrelBlock;
 import net.minecraft.block.Blocks;
@@ -50,8 +50,7 @@ public abstract class SwampHutGeneratorMixin extends StructurePiece {
                 Potions.FIRE_RESISTANCE
         );
         Potion potion = potions.get(random.nextInt(potions.size()));
-        return PotionUtil.setPotion(
-                new ItemStack(random.nextFloat() < 0.3f ? Items.SPLASH_POTION : Items.POTION),
+        return PotionUtil.setPotion(new ItemStack(random.nextFloat() < 0.3f ? Items.SPLASH_POTION : Items.POTION),
                 potion
         );
     }

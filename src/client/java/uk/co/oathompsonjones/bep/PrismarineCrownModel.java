@@ -1,4 +1,4 @@
-package uk.co.oathompsonjones;
+package uk.co.oathompsonjones.bep;
 
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;

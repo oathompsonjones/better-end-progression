@@ -1,4 +1,4 @@
-package uk.co.oathompsonjones.datagen;
+package uk.co.oathompsonjones.bep.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -7,7 +7,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
-import uk.co.oathompsonjones.BEPItems;
+import uk.co.oathompsonjones.bep.BEPItems;
 
 import java.util.function.Consumer;
 

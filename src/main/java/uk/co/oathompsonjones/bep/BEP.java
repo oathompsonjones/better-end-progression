@@ -1,4 +1,4 @@
-package uk.co.oathompsonjones;
+package uk.co.oathompsonjones.bep;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
